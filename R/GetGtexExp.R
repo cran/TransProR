@@ -20,48 +20,50 @@
 #'         Rows represent genes, and columns represent samples. Note that this function also saves the
 #'         organ-specific GTEx data as an RDS file at the specified output path.
 #'
-#' @examples
-#' counts_file <- system.file("extdata", "gtex_gene_expected_count_test", package = "TransProR")
-#' probe_map_file <- system.file("extdata",
-#'                               "gtex_probeMap_gencode.v23.annotation.gene.probemap_test",
-#'                               package = "TransProR")
-#' phenotype_file <- system.file("extdata", "GTEX_phenotype_test", package = "TransProR")
-#' ouput_file <- file.path(tempdir(), "skcm_gtex.rds")
-#'
-#' SKCM_gtex <- get_gtex_exp(
-#'   organ_specific = "Skin",
-#'   file_path = counts_file,
-#'   probe_map_path = probe_map_file,
-#'   pheno_path = phenotype_file,
-#'   output_path = ouput_file
-#' )
-#' head(SKCM_gtex[1:3, 1:3])
-#'
 #' @note The function will stop and throw an error if the input files do not exist, or if no samples are found
 #'       for the specified organ.
 #'
 #' @note CRITICAL: The 'output_path' parameter must end with '.rds' to be properly recognized by the function. It is also highly recommended
 #'       that the path includes specific identifiers related to the target samples. Please structure the 'output_path' following this pattern: './your_directory/your_sample_type.gtex.rds'.
 #'
-#' @importFrom data.table fread
+#' @importFrom utils read.table
 #' @importFrom dplyr distinct filter
 #' @importFrom rlang .data
 #' @export
 get_gtex_exp <- function(organ_specific,
-                         file_path,
-                         probe_map_path,
-                         pheno_path,
-                         output_path) {
+                          file_path,
+                          probe_map_path,
+                          pheno_path,
+                          output_path) {
 
-  # Check for the existence of the file paths, a prerequisite for further processing
+  # Check for the existence of the file paths
   if (!file.exists(file_path) | !file.exists(pheno_path) | !file.exists(probe_map_path)) {
     stop("One or more of the input files do not exist.")
   }
 
   # Load the gene expression, probe map, and phenotype data files from the provided paths
-  gtex.exp <- data.table::fread(file_path, header = TRUE, sep = '\t', data.table = FALSE)
-  gtex.pro <- data.table::fread(probe_map_path, header = TRUE, sep = '\t', data.table = FALSE)
-  gtex.phe <- data.table::fread(pheno_path, header = TRUE, sep = '\t', data.table = FALSE)
+  # gtex.exp <- data.table::fread(file_path, header = TRUE, sep = '\t', data.table = FALSE)
+  # gtex.pro <- data.table::fread(probe_map_path, header = TRUE, sep = '\t', data.table = FALSE)
+  # gtex.phe <- data.table::fread(pheno_path, header = TRUE, sep = '\t', data.table = FALSE)
+
+  # Load the gene expression, probe map, and phenotype data files
+  gtex.exp <- utils::read.table(file_path,
+                        header = TRUE,
+                        sep = '\t',
+                        stringsAsFactors = FALSE,
+                        check.names = FALSE)
+
+  gtex.pro <- utils::read.table(probe_map_path,
+                        header = TRUE,
+                        sep = '\t',
+                        stringsAsFactors = FALSE,
+                        check.names = FALSE)
+
+  gtex.phe <- utils::read.table(pheno_path,
+                        header = TRUE,
+                        sep = '\t',
+                        stringsAsFactors = FALSE,
+                        check.names = FALSE)
 
   # Merge the probe map with the expression data
   gtex.pro <- gtex.pro[, c(1,2)]  # Assuming the columns of interest are the first two

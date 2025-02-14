@@ -1,5 +1,6 @@
 # TransProR
-[![R-CMD-check](https://github.com/SSSYDYSSS/TransProR/workflows/R-CMD-check/badge.svg)](https://github.com/SSSYDYSSS/TransProR/actions)
+[![R-CMD-check](https://github.com/SSSYDYSSS/TransProR/workflows/R-CMD-check/badge.svg)](https://github.com/SSSYDYSSS/TransProR/actions) 
+
 <!-- badges: start -->
 
 <!-- badges: end -->
@@ -8,12 +9,6 @@
 Analysis and visualization of transcriptomic data are currently in progress. Future directions include multi-modal fusion, sparse learning, and the investigation of spatio-temporal effects.
 
 ## Installation
-
-You can install the released version of TransProR from CRAN with:
-
-``` r
-install.packages("TransProR")
-```
 
 You can install the development version of TransProR like so:
 
@@ -24,6 +19,9 @@ devtools::install_github("SSSYDYSSS/TransProR", build_vignettes = TRUE)
 install.packages("remotes")
 remotes::install_github("SSSYDYSSS/TransProR", build_vignettes = TRUE)
 ```
+## More examples see
+
+TransProR Manual：https://sssydysss.github.io/TransProRBook/
 
 ## System Requirements
 
