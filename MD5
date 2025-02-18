@@ -1,8 +1,8 @@
-54036fb0292a3d9b7f86a58c929a063c *DESCRIPTION
+0f432482fb9aff0c54a15e09374da837 *DESCRIPTION
 10bb2a80e02d318a6ad07e7a97386c56 *LICENSE
-057f9ffe6a230ae402b60d175b9e0797 *NAMESPACE
+226dbc241c46941c19ec58d4d59df5b1 *NAMESPACE
 4d2aa1e2a3031d48b28ead85091363ff *R/AdjustAlphaScale.R
-31b16a1894eb3f42a28b24621f09cbd8 *R/CircosFruits.R
+bbaee5ce61782532422c056721bf5ff9 *R/CircosFruits.R
 dd40d318b20fb1729d4505906ca8abbd *R/CombatNormal.R
 a613c503c0d1f1d7a71de1e7103784ee *R/CombatTumor.R
 112dc726b0b04a6ea3a6e3982226193f *R/CompareMerge.R
@@ -49,7 +49,7 @@ dc2c8f2596305123205e662360298551 *build/vignette.rds
 5215cf18b14870ffdd6ad072c158ba43 *data/all_degs_venn.rda
 f18001c25f364c3909db26c93cb6a88f *data/gtree.rda
 54db39f8616b2f99dc3c5c78120ffa82 *inst/doc/TransProR.Rmd
-a5b727cf6dcd8c535e644ef8e2a8bf1f *inst/doc/TransProR.html
+32b83157a54324b68db958a02df64963 *inst/doc/TransProR.html
 2442aef4faea38268525d47a1b6d36c6 *inst/extdata/DEG_deseq2.rds
 3e11c4ab098dd217ba2796c70e3fc18e *inst/extdata/DEG_deseq2_test.rds
 7a6df8d6fc72ae7b39831e10108b47c7 *inst/extdata/DEG_edgeR_test.rds

@@ -1,7 +1,7 @@
 Package: TransProR
 Type: Package
 Title: Analysis and Visualization of Multi-Omics Data
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: person("Dongyue", "Yu",     email = "yudongyue@mail.nankai.edu.cn", role = c("aut", "cre", "cph"),
             comment = c(ORCID = "0000-0002-7041-2073"))
 Maintainer: Dongyue Yu <yudongyue@mail.nankai.edu.cn>
@@ -9,9 +9,9 @@ Description: A tool for comprehensive transcriptomic data analysis, with a focus
 Imports: magrittr, stats, dplyr, rlang, tibble, sva, DESeq2, utils,
         edgeR, limma, ggplot2, ggVennDiagram, ggdensity, ggpubr,
         ggtree, hrbrthemes, grid, ggraph, tidygraph, tidyr, stringr,
-        geomtextpath, ggalt, ggnewscale, ggtreeExtra, Hmisc, circlize,
-        graphics, spiralize, ComplexHeatmap, grDevices
-Suggests: prettydoc, knitr, rmarkdown
+        geomtextpath, ggalt, ggnewscale, Hmisc, circlize, graphics,
+        spiralize, ComplexHeatmap, grDevices
+Suggests: prettydoc, knitr, ggtreeExtra, rmarkdown
 VignetteBuilder: knitr
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -21,7 +21,7 @@ LazyData: true
 RoxygenNote: 7.3.2
 Depends: R (>= 4.3.0)
 NeedsCompilation: no
-Packaged: 2025-02-14 16:18:34 UTC; Yu
+Packaged: 2025-02-17 19:12:16 UTC; Yu
 Author: Dongyue Yu [aut, cre, cph] (<https://orcid.org/0000-0002-7041-2073>)
 Repository: CRAN
-Date/Publication: 2025-02-14 23:00:10 UTC
+Date/Publication: 2025-02-18 09:00:05 UTC
